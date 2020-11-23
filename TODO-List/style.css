@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, skyblue, rgba(39, 212, 105, 0.452));
+    height: 100vh;
+}
+header{
+    font-size: 2rem;
+}
+header h1{
+    color: rgba(0, 0, 0, 0.87);
+}
+header h1::after{
+    font-family: 'FontAwesome';
+    content: "\f303";
+    font-size: 3.2rem;
+    margin-left: 4px;
+    color: rgb(0, 0, 0);
+}
+
+header, form{
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo-input, .todo-button{
+    border: none;
+    outline: none;
+    padding: 0.4rem;
+    font-size: 2.5rem;
+    background: none;
+    border-bottom: 2px solid #0f0f5a80;
+}
+.todo-input{
+    padding-left: 1rem;
+    color: #435252;
+}
+.todo-button{
+    color: rgba(26, 26, 167, 0.548);
+    cursor: pointer;
+    padding: 0.4rem 0.6rem;
+}
+.todo-button:hover{
+    color: rgb(23, 44, 160);
+    /* background: rgba(48, 48, 194, 0.5); */
+}
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list{
+    width: 43rem;
+    min-width: 40%;
+    list-style: none;
+    border: 2px solid #5858a0bf;
+}
+.todo-list .tasks-header{
+    background: linear-gradient(90deg, rgb(75 33 115 / 91%), rgb(141 133 148 / 91%));
+    padding: 1rem;
+    margin-bottom: 2.5rem;
+    position: sticky;
+    top: 0;
+}
+.todo-list .tasks-header h1{
+    color: rgb(218, 225, 226);
+    font-size: 2rem;
+}
+.todo{
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+    font-size: 2rem;
+    color: rgb(34 62 113 / 75%);
+    border-bottom: 1.5px solid #7676a5;
+    padding-bottom: 0.3rem;
+    transition: all 0.24s ease-in-out;
+}
+.todo-list .todo li{
+    flex: 1;
+    margin-left: 0.4rem;
+}
+.todo .trash-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.6rem 1.5rem;
+    border: none;
+    outline: none;
+    font-size: 2.5rem; 
+    color: white;
+    cursor: pointer;
+    border-radius: 1px;
+}
+.trash-btn .fa-trash{
+    pointer-events: none;
+}
+
+.trash-btn{
+    background: rgba(241, 198, 9, 0.877);
+}
+.trash-btn:hover{
+    color: rgba(241, 198, 9, 0.877);
+    background: white;
+}
+.trash-btn:active{
+    background: rgba(241, 198, 9, 0.877);
+    color: white;
+}
+
+@media (min-width: 321px) and (max-width: 475px){
+    html{
+        font-size: 8px;
+    }
+    .todo-list{
+        width: 90%;
+        min-width: 30%;
+    }
+}
+@media (min-width: 270px) and (max-width: 320px){
+    html{
+        font-size: 6px;
+    }
+    .todo-list{
+        width: 90%;
+        min-width: 30%;
+    }
+
+}
+
