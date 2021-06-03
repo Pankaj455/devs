@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Draw</title>
+    <link rel="stylesheet" href="board.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="tools">
+        <div class="color-menu">
+            <div class="color red" value="red"></div>
+            <div class="color blue" value="blue"></div>
+            <div class="color white" value="white"></div>
+            <div class="color black" value="black"></div>
+            <div class="color purple" value="purple"></div>
+            <div class="color navy" value="navy"></div>
+            <div class="color green" value="green"></div>
+            <div class="color sky-blue" value="skyblue"></div>
+            <div class="color orange" value="orange"></div>
+            <div class="color yellow" value="yellow"></div>
+        </div>
+        <div class="eraser"></div>
+        <select id="theme">
+            <option value="Light">LIGHT</option>
+            <option value="Dark">DARK</option>
+        </select>
+        <div class="thickness">
+            <div class="blocks">
+                <button class="block">
+                    <i class="normal"></i>
+                </button>
+                <button class="block">
+                    <i class="bold"></i>
+                </button>
+                <button class="block">
+                    <i class="bolder"></i>
+                </button>
+            </div>
+        </div>
+        <div class="clear-all">
+            <i class="fa fa-times"></i>
+        </div>
+        <!-- <button class="undo"></button> -->
+    </div>
+    <canvas class="board"></canvas>
+    <script src="board.js"></script>
+</body>
+
+</html>

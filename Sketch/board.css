@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body{
+    height: 100vh;
+    background: rgba(129, 112, 112, 0.404);
+}
+
+.board{
+    position: relative;
+    left: 2px;
+}
+
+.tools{
+    position: relative;
+    width: 100%;
+    height: 15%;
+}
+
+.color-menu{
+    position: relative;
+    top: 0; left: 0;
+    display: flex;
+    padding-left: 20px;
+}
+.color{
+    border: 2px solid black;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+.color:active{
+    border: 1px solid lightgrey;
+}
+.red{ background-color: red }
+.blue{ background-color: blue }
+.white{ background-color: white }
+.black{ background-color: black }
+.purple{ background-color: purple }
+.navy{ background-color: navy }
+.green{ background-color: green }
+.sky-blue{ background-color: skyblue }
+.orange{ background-color: orange }
+.yellow{ background-color: yellow }
+
+.eraser{
+    position: absolute;
+    width: 50px;
+    height: 20px;
+    border: 0.5px solid black;
+    background-color: white;
+    border-radius: 5px;
+    top: 25px;
+    left: 37%;
+    transform: rotateZ(-45deg);
+}
+
+.eraser::before{
+    content: 'Erase';
+    position: absolute;
+    top: 1px;
+    left: 5px;
+}
+
+.eraser:active{
+    top: 28px;
+}
+
+#theme{
+    position: absolute;
+    top: 20px;
+    left: 47%;
+    font-size: 18px;
+    padding: 5px;
+    outline: none;
+}
+.thickness{
+    position: absolute;
+    left: 59%;
+    top: 20px;
+    width: 150px;
+    height: 30px;
+}
+
+.thickness::before{
+    content: 'Thickness';
+    position: absolute;
+    top: 32px;
+    left: 25%;
+}
+
+.blocks{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.block{
+    border: 0.5px solid black;
+    width: 50px;
+    height: 100%;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(218, 243, 245);
+}
+.block:nth-child(1){
+    background-color: rgb(185, 168, 168);
+}
+
+.block:focus{
+    background-color: rgb(185, 168, 168);
+}
+
+.blocks .block i{
+    border-radius: 50%;
+    background: black;
+    pointer-events: none;
+}
+.blocks .block i.normal{
+    width: 10px;
+    height: 10px;
+}
+.blocks .block i.bold{
+    width: 14px;
+    height: 14px;
+}
+.blocks .block i.bolder{
+    width: 18px;
+    height: 18px;
+}
+
+.clear-all{
+    position: absolute;
+    left: 75%;
+    top: 18px;
+    width: 35px;
+    height: 35px;
+    background-color: rgb(224, 238, 226);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clear-all::before{
+    content: 'Clear All';
+    position: absolute;
+    left: 40px;
+}
+
+.clear-all:hover{
+    background-color: white;
+}
+.clear-all:active{
+    background-color: rgb(224, 238, 226);
+}
+.clear-all .fa-times{
+    font-size: 30px;
+    color: rgb(184, 107, 36);
+    pointer-events: none;
+}
+
